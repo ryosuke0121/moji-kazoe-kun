@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>文字数えくん</title>
-  <link rel="icon" href="favicon.ico" />
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>文字数えくん</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>文字数えくん</title>
+    <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9847GHWV9D"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  <label for="text">テキストを入力してください:</label>
-  <textarea id="text" placeholder="ここにテキストを入力してください"></textarea>
+      gtag("config", "G-9847GHWV9D");
+    </script>
+  </head>
+  <body>
+    <h1>文字数えくん</h1>
 
-  <label>
-    <input type="checkbox" id="includePunctuation"> 句読点を含む
-  </label>
+    <label for="text">テキストを入力してください:</label>
+    <textarea
+      id="text"
+      placeholder="ここにテキストを入力してください"
+    ></textarea>
 
-  <button onclick="countCharacters()">文字数を数える</button>
+    <label>
+      <input type="checkbox" id="includePunctuation" /> 句読点を含む
+    </label>
 
-  <div id="result"></div>
+    <button onclick="countCharacters()">文字数を数える</button>
 
-  <script src="script.js"></script>
-</body>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
